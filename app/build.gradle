@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 28
+//    buildToolsVersion '26.0.2'
+    buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "com.billy.android.autoregsiter.demo"
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
@@ -27,7 +28,10 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:25.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    compile project(':app_lib')
+    implementation project(':app_lib')
+    //1.先把autoregister插件编译出来;
+    //2.再把下面一行加上
+    implementation project(':app_lib_interface')
 }
 
 
